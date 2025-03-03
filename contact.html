@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work With Us | Surrealistly</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">Surrealistly</div>
+        <nav id="main-nav"></nav>
+      </div>
+    </header>
+    
+    <main>
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h1 class="page-title">Work With Us</h1>
+          
+          <div class="contact-container">
+            <div class="contact-info">
+              <h2>Transform Your Vision</h2>
+              <p>We collaborate with visionary brands, musicians, and artists to create surrealist artwork that transcends conventional boundaries.</p>
+              
+              <div class="language-element">
+                <p class="language-prompt">Share some keywords or phrases that inspire your vision...</p>
+              </div>
+              
+              <div class="process-visualization">
+                <div class="process-step-visual">
+                  <div class="step-icon"><i class="fas fa-comments"></i></div>
+                  <div class="step-text">
+                    <h4>Conceptual Dialogue</h4>
+                    <p>We begin with in-depth conversations to understand your vision.</p>
+                  </div>
+                </div>
+                <div class="step-line"></div>
+                <div class="process-step-visual">
+                  <div class="step-icon"><i class="fas fa-pen-fancy"></i></div>
+                  <div class="step-text">
+                    <h4>Language Crafting</h4>
+                    <p>We craft language prompts that guide the AI to generate the desired aesthetic.</p>
+                  </div>
+                </div>
+                <div class="step-line"></div>
+                <div class="process-step-visual">
+                  <div class="step-icon"><i class="fas fa-robot"></i></div>
+                  <div class="step-text">
+                    <h4>AI Generation</h4>
+                    <p>Our proprietary AI systems transform language into visual concepts.</p>
+                  </div>
+                </div>
+                <div class="step-line"></div>
+                <div class="process-step-visual">
+                  <div class="step-icon"><i class="fas fa-paint-brush"></i></div>
+                  <div class="step-text">
+                    <h4>Artistic Refinement</h4>
+                    <p>Human artists refine and enhance the AI-generated concepts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form-container">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label class="form-label" for="name">Name</label>
+                  <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" id="email" class="form-input" placeholder="Your email" required>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="project-type">Project Type</label>
+                  <select id="project-type" class="form-input" required>
+                    <option value="">Select project type</option>
+                    <option value="music">Music Industry</option>
+                    <option value="brand">Brand Identity</option>
+                    <option value="film">Film & Media</option>
+                    <option value="art">Fine Art</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label" for="message">Project Description</label>
+                  <textarea id="message" class="form-textarea" placeholder="Describe your vision or project..." required></textarea>
+                </div>
+                
+                <div class="language-element">
+                  <p class="language-prompt">Share some keywords or phrases that inspire your vision...</p>
+                </div>
+                
+                <button type="submit" class="btn">Submit Inquiry</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer id="footer"></footer>
+    
+    <div id="p5-container"></div>
+    
+    <script type="module">
+      import { setupNavigation } from '/src/components/navigation.ts'
+      import { setupFooter } from '/src/components/footer.ts'
+      import { setupBackground } from '/src/effects/background.ts'
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        setupNavigation()
+        setupFooter()
+        setupBackground()
+        
+        // Setup form submission
+        const contactForm = document.getElementById('contact-form')
+        if (contactForm) {
+          contactForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            
+            // Show success message
+            contactForm.innerHTML = `
+              <div class="success-message">
+                <i class="fas fa-check-circle" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                <h3>Thank you for your inquiry!</h3>
+                <p>We'll get back to you within 48 hours to discuss your project.</p>
+              </div>
+            `
+          })
+        }
+      })
+    </script>
+  </body>
+</html>

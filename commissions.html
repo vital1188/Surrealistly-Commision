@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commissions | Surrealistly</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">Surrealistly</div>
+        <nav id="main-nav"></nav>
+      </div>
+    </header>
+    
+    <main>
+      <section id="commissions" class="commissions-section">
+        <div class="container">
+          <h1 class="page-title">Commissioned Artworks</h1>
+          
+          <div class="commissions-grid">
+            <div class="commission-item" data-project="tears-for-fears">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tears For Fears Album">
+              </div>
+              <div class="commission-info">
+                <h3>Tears For Fears</h3>
+                <p class="commission-prompt">"Echoes of collective anxiety transformed into visual symphonies"</p>
+                <a href="/project-detail.html?project=tears-for-fears" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+            
+            <div class="commission-item" data-project="sonic-dreamscape">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Music Festival">
+              </div>
+              <div class="commission-info">
+                <h3>Sonic Dreamscape Festival</h3>
+                <p class="commission-prompt">"A convergence of sound and vision where reality dissolves"</p>
+                <a href="/project-detail.html?project=sonic-dreamscape" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+            
+            <div class="commission-item" data-project="ethereal-soundscapes">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Concert Visuals">
+              </div>
+              <div class="commission-info">
+                <h3>Ethereal Soundscapes Tour</h3>
+                <p class="commission-prompt">"Music visualized as architectural dreamscapes in constant flux"</p>
+                <a href="/project-detail.html?project=ethereal-soundscapes" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+            
+            <div class="commission-item" data-project="quantum-echoes">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Quantum Echoes">
+              </div>
+              <div class="commission-info">
+                <h3>Quantum Echoes Exhibition</h3>
+                <p class="commission-prompt">"Parallel realities collide in a visual exploration of quantum theory"</p>
+                <a href="/project-detail.html?project=quantum-echoes" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+            
+            <div class="commission-item" data-project="neural-symphony">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Neural Symphony">
+              </div>
+              <div class="commission-info">
+                <h3>Neural Symphony</h3>
+                <p class="commission-prompt">"Brainwave patterns translated into visual compositions"</p>
+                <a href="/project-detail.html?project=neural-symphony" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+            
+            <div class="commission-item" data-project="chronos-fragmented">
+              <div class="commission-image">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chronos Fragmented">
+              </div>
+              <div class="commission-info">
+                <h3>Chronos Fragmented</h3>
+                <p class="commission-prompt">"Time splinters into crystalline moments of perpetual now"</p>
+                <a href="/project-detail.html?project=chronos-fragmented" class="btn btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="commission-cta">
+            <h3>Ready to transform your vision into surrealist art?</h3>
+            <a href="/contact.html" class="btn">Work With Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer id="footer"></footer>
+    
+    <div id="p5-container"></div>
+    
+    <script type="module">
+      import { setupNavigation } from '/src/components/navigation.ts'
+      import { setupFooter } from '/src/components/footer.ts'
+      import { setupBackground } from '/src/effects/background.ts'
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        setupNavigation()
+        setupFooter()
+        setupBackground()
+      })
+    </script>
+  </body>
+</html>
